@@ -1,0 +1,5 @@
+@import "./assets/sass/main.scss";
+.main_grid{
+  display: grid;
+  grid-template-columns: 255px 1fr;
+}
