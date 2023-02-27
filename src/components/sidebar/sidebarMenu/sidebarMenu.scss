@@ -1,0 +1,49 @@
+@import "../../../assets/sass/base/general.scss";
+
+.sidebar_menu{
+  ul{
+    @extend .no-list;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $cread;
+    &:last-child{
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+    li{
+      a{
+        display: flex;
+        align-items: center;
+        padding: 10px 40px;
+        color: $cread;
+        &:before{
+          content: '';
+          display: block;
+          position: absolute;
+          width: 3px;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: $cdark;
+        }
+        i{
+          margin-right: 10px;
+          font-size: 20px;
+        }
+        span{
+          font-size: 16px;
+        }
+        &:hover{
+          color: $cline;
+          background-color: rgba($cgray, 0.08);
+          &:before{
+            background-color: $cline;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../assets/sass/base/general.scss";
+
+
+.main_sidebar{
+  background-color: $cdark;
+  height: 100vh;
+  .sidebar_container{
+    .sidebar_header{
+      .logo{
+        padding: 40px;
+        margin-bottom: 20px;
+        a{
+          display: flex;
+          align-items: center;
+          i{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 22px;
+            background-color: $ccorp;
+            color: $cwhite;
+          }
+          span{
+            font-size: 19px;
+            font-weight: 700;
+            color: $cread;
+          }
+        }
+      }
+    }
+  }
+}
