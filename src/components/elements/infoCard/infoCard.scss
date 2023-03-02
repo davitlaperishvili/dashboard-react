@@ -1,0 +1,27 @@
+@import "../../../assets/sass/base/general.scss";
+
+.info_card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title{
+    margin-bottom: 12px;
+    color: $cgray;
+    font-size: 19px;
+    transition: 0.4s;
+  }
+  .value{
+    color: $cbase;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 0.4s;
+  }
+  &:hover{
+    .title{
+      color: $ccorp;
+    }
+    .value{
+      color: $ccorp;
+    }
+  }
+}

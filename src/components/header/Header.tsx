@@ -1,4 +1,5 @@
 import UserInfo from "./userInfo/UserInfo"
+import "./header.scss"
 
 interface headerProps {
   title: string

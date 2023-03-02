@@ -1,6 +1,10 @@
 import React from 'react'
 import { Chart } from "react-google-charts";
 import Header from '../header/Header';
+import Card from './card/Card';
+import ChartElem from '../elements/chart/ChartElem';
+import "./mainContent.scss"
+import InfoCard from '../elements/infoCard/InfoCard';
 
 export const data = [
   ["Year", "Sales", "Expenses"],
@@ -22,13 +26,33 @@ export default function MainContent() {
     <section className="main_content">
       <Header title="Overview"/>
       <div className="main_content_wrap">
-        <Chart
-          chartType="AreaChart"
-          width="100%"
-          height="400px"
-          data={data}
-          options={options}
-        />
+        <div className="grids_wrap no_border gap-2">
+          <Card classList="grid-3 border_all">
+            <InfoCard title="Unresolved" value="60" />
+          </Card>
+          <Card classList="grid-3 border_all">
+            <InfoCard title="Overdue" value="16" />
+          </Card>
+          <Card classList="grid-3 border_all">
+            <InfoCard title="Open" value="43" />
+          </Card>
+          <Card classList="grid-3 border_all">
+            <InfoCard title="On hold" value="64" />
+          </Card>
+        </div>
+        <div className="grids_wrap">
+          <Card classList="grid-6">
+            <ChartElem  title="Example Chart" type="BarChart" data={data}/>
+          </Card>
+          <Card classList="grid-6">
+            <ChartElem  title="Example Chart" type="AreaChart" data={data}/>
+          </Card>
+        </div>
+        <div className="grids_wrap">
+          <Card classList="grid-12">
+            <ChartElem  title="Example Chart" type="AreaChart" data={data}/>
+          </Card>
+        </div>
       </div>
     </section>
   )
