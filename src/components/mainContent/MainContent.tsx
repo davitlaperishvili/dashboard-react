@@ -5,7 +5,6 @@ import Card from './card/Card';
 import ChartElem from '../elements/chart/ChartElem';
 import "./mainContent.scss"
 import InfoCard from '../elements/infoCard/InfoCard';
-import TodoItems from '../todo/todoElements/todoItems';
 import Todo from '../todo/Todo';
 
 export const data = [
@@ -55,11 +54,11 @@ export default function MainContent() {
             <ChartElem  title="Example Chart" type="AreaChart" data={data}/>
           </Card>
         </div>
-        <div className="grids_wrap">
-          <Card classList="grid-6">
+        <div className="grids_wrap no_border gap-1">
+          <Card classList="grid-6 border_all">
             <Todo />
           </Card>
-          <Card classList="grid-6">
+          <Card classList="grid-6 border_all">
             <Todo />
           </Card>
         </div>

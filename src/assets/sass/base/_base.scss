@@ -276,6 +276,9 @@ div.container{
     }
   }
 }
+.full_width{
+  margin: 0 -20px;
+}
 .card{
   padding: 20px;
   background-color: $cwhite;
@@ -318,3 +321,41 @@ div.container{
   max-width: 100%;
 }
 
+
+//COLORS
+
+.color-primary{
+  background-color: $ccorp;
+  color: $cwhite;
+}
+.color-success{
+  background-color: $csuccess;
+  color: $cwhite;
+}
+.color-danger{
+  background-color: $cdanger;
+  color: $cwhite;
+}
+.color-info{
+  background-color: $cinfo;
+  color: $cwhite;
+}
+.color-warning{
+  background-color: $cwarning;
+  color: $cwhite;
+}
+
+.card_header{
+  margin-bottom: 20px;
+  .card_title{
+    margin-bottom: 10px;
+    span{
+      font-size: 19px;
+      font-weight: 700;
+    }
+  }
+  .card_subtitle{
+    font-size: 12px;
+    color: $cgray;
+  }
+}

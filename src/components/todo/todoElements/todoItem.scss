@@ -1,0 +1,46 @@
+@import "../../../assets/sass/base/general.scss";
+.todo_item{
+  padding: 20px;
+  border-top: 1px solid rgba($cread, 0.5) ;
+  transition: 0.4s;
+  &:last-child{
+    margin-bottom: -20px;
+    border-bottom-right-radius: 10px;
+  }
+  &:hover{
+    background-color: rgba($cread, 0.2);
+  }
+  .todo_item_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .checkbox{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        margin-right: 16px;
+        border-radius: 50%;
+        border: 1px solid $cread;
+      }
+      .todo_title{
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+    .right{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .tag_item{
+        padding: 5px 10px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
