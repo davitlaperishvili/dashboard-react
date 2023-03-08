@@ -5,6 +5,8 @@ import Card from './card/Card';
 import ChartElem from '../elements/chart/ChartElem';
 import "./mainContent.scss"
 import InfoCard from '../elements/infoCard/InfoCard';
+import TodoItems from '../todo/todoElements/todoItems';
+import Todo from '../todo/Todo';
 
 export const data = [
   ["Year", "Sales", "Expenses"],
@@ -51,6 +53,14 @@ export default function MainContent() {
         <div className="grids_wrap">
           <Card classList="grid-12">
             <ChartElem  title="Example Chart" type="AreaChart" data={data}/>
+          </Card>
+        </div>
+        <div className="grids_wrap">
+          <Card classList="grid-6">
+            <Todo />
+          </Card>
+          <Card classList="grid-6">
+            <Todo />
           </Card>
         </div>
       </div>
