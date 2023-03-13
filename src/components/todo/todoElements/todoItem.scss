@@ -1,4 +1,35 @@
 @import "../../../assets/sass/base/general.scss";
+.add_new_todo{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  input{
+    flex: 1;
+    border: none;
+  }
+  .add_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $clight;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    i{
+      font-size: 25px;
+      color: $cgray;
+      transition: 0.4s;
+    }
+    &:hover{
+      border-color: $ccorp;
+      i{
+        color: $ccorp;
+      }
+    }
+  }
+}
 .todo_item{
   padding: 20px;
   border-top: 1px solid rgba($cread, 0.5) ;
