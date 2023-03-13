@@ -56,7 +56,7 @@ export default function MainContent() {
         </div>
         <div className="grids_wrap no_border gap-1">
           <Card classList="grid-6 border_all">
-            <Todo />
+            
           </Card>
           <Card classList="grid-6 border_all">
             <Todo />

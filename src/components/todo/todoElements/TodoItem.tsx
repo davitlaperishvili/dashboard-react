@@ -5,8 +5,11 @@ interface todoTags {
   color: string
 }
 interface todoProps {
+  id: string;
   title: string;
   tags?: todoTags[];
+  done: boolean,
+  changeTaskStatus: any
 }
 export default function TodoItem(props: todoProps) {
   function renderTags() {
@@ -16,10 +19,15 @@ export default function TodoItem(props: todoProps) {
       )
     })
   }
+  function isDone () {
+    return props.done ? "done" : "";
+  }
   return (
     <div className="todo_item full_width">
       <div className="todo_item_wrap">
-        <div className="left">
+        <div className={`left ${isDone()}`} onClick={() => {
+          props.changeTaskStatus(props.id)
+        }}>
           <div className="checkbox"></div>
           <div className="todo_title">{props.title}</div>
         </div>
