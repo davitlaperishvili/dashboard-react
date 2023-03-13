@@ -16,19 +16,33 @@ export default function AddNewTodo(props: propsType) {
   })
   function handleChange(e:React.ChangeEvent<HTMLInputElement> ) {
     setValue({
-      title: e.target.value,
-      tags: [
-        {
-          title: "Default",
-          color: "info"
-        },
-      ],
+      title: e.target.value
     })
   }
   return (
     <div className="add_new_todo">
-      <input type="text" value={value.title} onChange={e => handleChange(e)} placeholder="Create New Task" />
-      <div className="add_btn" onClick={() => {props.createItem(value)}}>
+      <input 
+        type="text" 
+        value={value.title} 
+        name="title" 
+        onChange={e => handleChange(e)} 
+        placeholder="Create New Task"
+        onKeyDown={ e => {
+          console.log(e.code)
+          if(e.code === "Enter"){
+            props.createItem(value, setValue);
+            setValue({
+              title: ""
+            })
+          }
+        }} 
+      />
+      <div className="add_btn" onClick={() => {
+        props.createItem(value, setValue);
+        setValue({
+          title: ""
+        })
+      }}>
         <i className="ri-add-line"></i>
       </div>
     </div>

@@ -3,6 +3,13 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  .form_items{
+    display: flex;
+    align-items: center;
+    .form_item{
+      margin-bottom: 0;
+    }
+  }
   input{
     flex: 1;
     border: none;

@@ -71,16 +71,24 @@ export default function Todo() {
     title: string,
     tags?: todoTags[]
   }): void {
-    console.log("Clicked")
+    
     const newTask = {
       id: (tasks.length + 1).toString(),
       title: value.title,
       done: false,
-      tags: value.tags
+      tags: [
+        {
+          title: "Default",
+          color: "info"
+        },
+      ]
     }
     const tasksClone = [...tasks, newTask];
     console.log(tasksClone)
     setTasks(tasksClone)
+    // callback({
+    //   title: "dfgsd"
+    // })
   }
   return (
       <div className="todo_wrap">
