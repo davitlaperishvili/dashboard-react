@@ -6,6 +6,7 @@ import ChartElem from '../elements/chart/ChartElem';
 import "./mainContent.scss"
 import InfoCard from '../elements/infoCard/InfoCard';
 import Todo from '../todo/Todo';
+import Ticket from '../ticketsList/Ticket';
 
 export const data = [
   ["Year", "Sales", "Expenses"],
@@ -56,7 +57,7 @@ export default function MainContent() {
         </div>
         <div className="grids_wrap no_border gap-1">
           <Card classList="grid-6 border_all">
-            
+            <Ticket />
           </Card>
           <Card classList="grid-6 border_all">
             <Todo />

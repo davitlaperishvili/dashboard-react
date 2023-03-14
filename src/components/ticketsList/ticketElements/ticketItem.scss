@@ -1,0 +1,34 @@
+@import "../../../assets/sass/base/general.scss";
+
+.ticket_item{
+  padding: 20px;
+  border-top: 1px solid rgba($cread, 0.5) ;
+  transition: 0.4s;
+  &:last-child{
+    margin-bottom: -20px;
+    border-bottom-right-radius: 10px;
+  }
+  &:hover{
+    background-color: rgba($cread, 0.2);
+  }
+  .ticket_item_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .ticket_title{
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+    .right{
+      color: #9FA2B4;
+      font-size: 14px;
+    }
+  }
+}
