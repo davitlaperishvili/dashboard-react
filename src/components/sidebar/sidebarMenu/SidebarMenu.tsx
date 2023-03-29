@@ -1,21 +1,31 @@
 import React from 'react'
 import "./sidebarMenu.scss"
+import { NavLink } from "react-router-dom";
+import MainContent from '../../mainContent/MainContent';
+import TicketsPage from '../../pages/tickets/TicketsPage';
 
 export default function SidebarMenu() {
   return (
     <div className="sidebar_menu">
+      
       <ul>
         <li>
-          <a href="">
-            <i className="ri-home-2-fill"></i>
-            <span>Overview</span>
-          </a>
+          <NavLink
+              to="/dashboard-react/"
+              end
+            >
+              <i className="ri-home-2-fill"></i>
+              <span>Overview</span>
+            </NavLink>
         </li>
         <li>
-          <a href="">
-            <i className="ri-coupon-fill"></i>
-            <span>Tickets</span>
-          </a>
+          <NavLink
+              to="/dashboard-react/tickets"
+              end
+            >
+              <i className="ri-coupon-fill"></i>
+              <span>Tickets</span>
+            </NavLink>
         </li>
         <li>
           <a href="">

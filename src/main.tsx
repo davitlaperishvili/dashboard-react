@@ -6,6 +6,7 @@ import { compose, createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import { rootReducer } from "./redux/rootReducer";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const windowObject: any = {...window}
 let store = createStore(rootReducer, compose(applyMiddleware(thunk), windowObject.__REDUX_DEVTOOLS_EXTENSION__ ? windowObject.__REDUX_DEVTOOLS_EXTENSION__() : (f:any) => f));
@@ -14,7 +15,9 @@ let store = createStore(rootReducer, compose(applyMiddleware(thunk), windowObjec
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode >
     <Provider store={store}>
+      <Router>
         <App />
+      </Router>
     </Provider>
   </React.StrictMode>,
 )

@@ -358,4 +358,10 @@ div.container{
     font-size: 12px;
     color: $cgray;
   }
+  &.d-flex{
+    display: flex;
+  }
+  &.justify-content-between{
+    justify-content: space-between;
+  }
 }
